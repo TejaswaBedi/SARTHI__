@@ -33,8 +33,8 @@ const AdminHomePage = () => {
             width: "90vw",
             padding: "1vh 2vh",
             margin: "4vh",
-            background: "#242526",
-            borderRadius: "30px",
+            background: "blue",
+            // borderRadius: "30px",
           }}
         >
           <AdminCompany title="UPCOMING COMPANIES" />

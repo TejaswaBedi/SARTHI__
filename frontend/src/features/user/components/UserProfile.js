@@ -61,8 +61,8 @@ export function UserProfile() {
                   width: "90vw",
                   padding: "1vh 2vh",
                   margin: "4vh",
-                  background: "#242526",
-                  borderRadius: "30px",
+                  background: "lightblue",
+                  ////borderRadius: "30px",
                 }}
               >
                 <form
@@ -118,7 +118,7 @@ export function UserProfile() {
                         style={{
                           width: "150%",
                           marginLeft: "-50%",
-                          borderBottom: "2px solid pink",
+                          borderBottom: "2px solid white",
                         }}
                       />
                     </div>
@@ -171,7 +171,7 @@ export function UserProfile() {
                         style={{
                           width: "150%",
                           marginLeft: "-50%",
-                          borderBottom: "2px solid pink",
+                          borderBottom: "2px solid white",
                         }}
                       />
                     </div>
@@ -229,7 +229,7 @@ export function UserProfile() {
                         style={{
                           width: "150%",
                           marginLeft: "-50%",
-                          borderBottom: "2px solid pink",
+                          borderBottom: "2px solid white",
                         }}
                       />
                     </div>
@@ -282,7 +282,7 @@ export function UserProfile() {
                         style={{
                           width: "150%",
                           marginLeft: "-50%",
-                          borderBottom: "2px solid pink",
+                          borderBottom: "2px solid white",
                         }}
                       />
                     </div>
@@ -335,7 +335,7 @@ export function UserProfile() {
                         style={{
                           width: "150%",
                           marginLeft: "-50%",
-                          borderBottom: "2px solid pink",
+                          borderBottom: "2px solid white",
                         }}
                       />
                     </div>
@@ -388,7 +388,7 @@ export function UserProfile() {
                         style={{
                           width: "150%",
                           marginLeft: "-50%",
-                          borderBottom: "2px solid pink",
+                          borderBottom: "2px solid white",
                         }}
                       />
                     </div>
@@ -441,7 +441,7 @@ export function UserProfile() {
                         style={{
                           width: "150%",
                           marginLeft: "-50%",
-                          borderBottom: "2px solid pink",
+                          borderBottom: "2px solid white",
                         }}
                       />
                     </div>
@@ -494,7 +494,7 @@ export function UserProfile() {
                         style={{
                           width: "150%",
                           marginLeft: "-50%",
-                          borderBottom: "2px solid pink",
+                          borderBottom: "2px solid white",
                         }}
                       />
                     </div>
@@ -547,7 +547,7 @@ export function UserProfile() {
                         style={{
                           width: "150%",
                           marginLeft: "-50%",
-                          borderBottom: "2px solid pink",
+                          borderBottom: "2px solid white",
                         }}
                       />
                     </div>
@@ -600,7 +600,7 @@ export function UserProfile() {
                         style={{
                           width: "150%",
                           marginLeft: "-50%",
-                          borderBottom: "2px solid pink",
+                          borderBottom: "2px solid white",
                         }}
                       />
                     </div>
@@ -610,7 +610,7 @@ export function UserProfile() {
                       onClick={(e) => setSelectEdit(null)}
                       type="submit"
                       style={{
-                        backgroundColor: "pink",
+                        backgroundColor: "white",
                         fontSize: "1.2rem",
                         marginRight: "20px",
                       }}
@@ -619,7 +619,7 @@ export function UserProfile() {
                     </Button>
                     <Button
                       type="submit"
-                      style={{ backgroundColor: "pink", fontSize: "1.2rem" }}
+                      style={{ backgroundColor: "white", fontSize: "1.2rem" }}
                     >
                       Save
                     </Button>
@@ -636,8 +636,8 @@ export function UserProfile() {
               width: "90vw",
               padding: "1vh 2vh",
               margin: "4vh",
-              background: "#242526",
-              borderRadius: "30px",
+              background: "lightblue",
+              ////borderRadius: "30px",
             }}
           >
             <div
@@ -654,7 +654,7 @@ export function UserProfile() {
                   height: "5%",
                   width: "100%",
                   fontSize: "2rem",
-                  color: "pink",
+                  color: "white",
                   fontWeight: "bold",
                   background: "transparent",
                   textAlign: "center",
@@ -719,7 +719,7 @@ export function UserProfile() {
                   onClick={(e) => handleEditForm()}
                   type="submit"
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     fontSize: "1.2rem",
                   }}
                 >

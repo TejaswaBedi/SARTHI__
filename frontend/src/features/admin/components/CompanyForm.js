@@ -161,7 +161,7 @@ const CompanyForm = () => {
                     id="type"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -214,7 +214,7 @@ const CompanyForm = () => {
                     id="url"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -269,7 +269,7 @@ const CompanyForm = () => {
                     id="name"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -322,7 +322,7 @@ const CompanyForm = () => {
                     id="field"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -375,7 +375,7 @@ const CompanyForm = () => {
                     id="ctc"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -428,7 +428,7 @@ const CompanyForm = () => {
                     id="scheduled"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -536,7 +536,7 @@ const CompanyForm = () => {
                     id="vacancy"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -594,7 +594,7 @@ const CompanyForm = () => {
                     id="attachment1"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -647,7 +647,7 @@ const CompanyForm = () => {
                     id="attachment2"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -705,7 +705,7 @@ const CompanyForm = () => {
                     id="cgpa"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -758,7 +758,7 @@ const CompanyForm = () => {
                     id="ten"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -811,7 +811,7 @@ const CompanyForm = () => {
                     id="twelve"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -864,7 +864,7 @@ const CompanyForm = () => {
                     id="backlogs"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -878,7 +878,7 @@ const CompanyForm = () => {
                 <Button
                   onClick={handleClick}
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     width: "10vw",
                     fontSize: "20px",
                     marginRight: "3%",
@@ -889,7 +889,7 @@ const CompanyForm = () => {
                 <Button
                   type="submit"
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     width: "10vw",
                     fontSize: "20px",
                   }}
@@ -902,7 +902,7 @@ const CompanyForm = () => {
                 <Button
                   type="submit"
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     width: "10vw",
                     fontSize: "20px",
                   }}

@@ -35,7 +35,7 @@ export function Notice() {
                   style={{
                     backgroundColor: "#969797",
                     color: "black",
-                    border: "3px solid pink",
+                    border: "3px solid white",
                   }}
                 >
                   <strong>Add Notice</strong>
@@ -50,8 +50,8 @@ export function Notice() {
                 width: "90vw",
                 padding: "1vh 2vh",
                 margin: "4vh",
-                background: "#242526",
-                borderRadius: "30px",
+                background: "lightblue",
+                //borderRadius: "30px",
               }}
             >
               <div
@@ -68,7 +68,7 @@ export function Notice() {
                     background: "transparent",
                     height: "93%",
                     overflow: "auto",
-                    borderRadius: "30px",
+                    //borderRadius: "30px",
                   }}
                 >
                   {user.role === "admin" &&
@@ -83,7 +83,7 @@ export function Notice() {
                                 padding: "2vh",
                                 background: "#969797",
                                 border: "red 2px",
-                                borderRadius: "30px",
+                                //borderRadius: "30px",
                                 display: "flex",
                                 justifyContent: "space-between",
                               }}
@@ -97,7 +97,7 @@ export function Notice() {
                               >
                                 <strong>{currNotice.noticeMsg}</strong>
                               </div>
-                              <div style={{ color: "pink" }}>
+                              <div style={{ color: "white" }}>
                                 <p>
                                   Date -{" "}
                                   {new Date(
@@ -136,7 +136,7 @@ export function Notice() {
                               <NavLink
                                 to={`/admin/notice-form/${currNotice.id}`}
                               >
-                                <Button style={{ backgroundColor: "pink" }}>
+                                <Button style={{ backgroundColor: "white" }}>
                                   Edit
                                 </Button>
                               </NavLink>
@@ -158,7 +158,7 @@ export function Notice() {
                                   padding: "2vh",
                                   background: "#969797",
                                   border: "red 2px",
-                                  borderRadius: "30px",
+                                  // //borderRadius: "30px",
                                   display: "flex",
                                   justifyContent: "space-between",
                                 }}
@@ -172,7 +172,7 @@ export function Notice() {
                                 >
                                   <strong>{currNotice.noticeMsg}</strong>
                                 </div>
-                                <div style={{ color: "pink" }}>
+                                <div style={{ color: "white" }}>
                                   <p>
                                     Date -{" "}
                                     {new Date(
@@ -212,7 +212,7 @@ export function Notice() {
                               <NavLink
                                 to={`/admin/notice-form/${currNotice.id}`}
                               >
-                                <Button style={{ backgroundColor: "pink" }}>
+                                <Button style={{ backgroundColor: "white" }}>
                                   Edit
                                 </Button>
                               </NavLink>

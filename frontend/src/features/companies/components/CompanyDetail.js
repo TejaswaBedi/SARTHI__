@@ -69,7 +69,7 @@ export function CompanyDetail() {
                 height: "30vh",
                 margin: "2vh 4vh",
                 border: "red 2px",
-                borderRadius: "30px",
+                // borderRadius: "30px",
 
                 display: "flex",
                 justifyContent: "space-between",
@@ -86,7 +86,7 @@ export function CompanyDetail() {
                 <div className="tagTitle">COMPANY NAME</div>
                 <div
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     height: "1%",
                     width: "90%",
                   }}
@@ -100,7 +100,7 @@ export function CompanyDetail() {
                 <div className="tagTitle">COMPANY TYPE</div>
                 <div
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     height: "1%",
                     width: "90%",
                   }}
@@ -117,7 +117,7 @@ export function CompanyDetail() {
                 <div className="tagTitle">COMPANY CTC</div>
                 <div
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     height: "1%",
                     width: "90%",
                   }}
@@ -134,7 +134,7 @@ export function CompanyDetail() {
                 <div className="tagTitle">DATE OF ARRIVAL</div>
                 <div
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     height: "1%",
                     width: "90%",
                   }}
@@ -148,9 +148,9 @@ export function CompanyDetail() {
                 width: "90vw",
                 margin: "1vh 4vh",
                 padding: "2vh",
-                background: "#242526",
+                background: "lightblue",
                 border: "red 2px",
-                borderRadius: "30px",
+                // borderRadius: "30px",
               }}
             >
               <div className="header-main" style={{ marginLeft: "-4vh" }}>
@@ -164,7 +164,7 @@ export function CompanyDetail() {
                   padding: "4vh",
                   marginTop: "1vh",
                   marginLeft: "2vh",
-                  borderRadius: "20px",
+                  // borderRadius: "20px",
                 }}
               >
                 {company.description}
@@ -176,9 +176,9 @@ export function CompanyDetail() {
                 width: "90vw",
                 margin: "1vh 4vh",
                 padding: "2vh",
-                background: "#242526",
+                background: "lightblue",
                 border: "red 2px",
-                borderRadius: "30px",
+                // borderRadius: "30px",
               }}
             >
               <div className="header-main" style={{ marginLeft: "-4vh" }}>
@@ -192,7 +192,7 @@ export function CompanyDetail() {
                   padding: "0 2vh",
                   marginTop: "1vh",
                   marginLeft: "2vh",
-                  borderRadius: "20px",
+                  // borderRadius: "20px",
                 }}
               >
                 JDs and Forms
@@ -205,9 +205,9 @@ export function CompanyDetail() {
                 height: "40vh",
                 margin: "2vh 4vh",
                 padding: "2vh",
-                background: "#242526",
+                background: "lightblue",
                 border: "red 2px",
-                borderRadius: "30px",
+                // borderRadius: "30px",
               }}
             >
               <div className="header-wrapper">
@@ -228,7 +228,7 @@ export function CompanyDetail() {
 
                         padding: "0 2vh",
                         marginTop: "1vh",
-                        borderRadius: "20px",
+                        // borderRadius: "20px",
                       }}
                     >
                       <div

@@ -39,7 +39,8 @@ export function AdminCompany({ title }) {
               justifyContent: "center",
               alignItems: "center",
               background: "transparent",
-              color: "pink",
+              // color: "pink",
+              color: "white",
               fontSize: "30px",
             }}
           >
@@ -51,7 +52,7 @@ export function AdminCompany({ title }) {
                 style={{
                   backgroundColor: "#969797",
                   color: "black",
-                  border: "3px solid pink",
+                  border: "3px solid white",
                 }}
               >
                 <strong>Add Company</strong>
@@ -98,7 +99,7 @@ export function AdminCompany({ title }) {
                     }}
                   >
                     <NavLink to={`/admin/company-form/edit/${id}`}>
-                      <Button style={{ backgroundColor: "pink" }}>Edit</Button>
+                      <Button style={{ backgroundColor: "white" }}>Edit</Button>
                     </NavLink>
                   </div>
                 </>

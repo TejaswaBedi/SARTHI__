@@ -32,8 +32,8 @@ const CompanyPage = () => {
                 height: "100%",
                 width: "46%",
                 padding: "1vh 2vh",
-                background: "#242526",
-                borderRadius: "30px",
+                background: "lightblue",
+                // borderRadius: "30px",
               }}
             >
               {user && user.role === "admin" ? (
@@ -48,8 +48,8 @@ const CompanyPage = () => {
                 height: "100%",
                 width: "46%",
                 padding: "1vh 2vh",
-                background: "#242526",
-                borderRadius: "30px",
+                background: "lightblue",
+                // borderRadius: "30px",
               }}
             >
               <div
@@ -75,7 +75,7 @@ const CompanyPage = () => {
                       justifyContent: "center",
                       alignItems: "center",
                       background: "transparent",
-                      color: "pink",
+                      color: "white",
                       fontSize: "30px",
                     }}
                   >
@@ -88,7 +88,7 @@ const CompanyPage = () => {
                           style={{
                             backgroundColor: "#969797",
                             color: "black",
-                            border: "3px solid pink",
+                            border: "3px solid white",
                           }}
                         >
                           <strong>Add Company</strong>
@@ -104,7 +104,7 @@ const CompanyPage = () => {
                     background: "transparent",
                     height: "93%",
                     overflow: "auto",
-                    borderRadius: "30px",
+                    // borderRadius: "30px",
                   }}
                 >
                   {company.map((currElem) => {
@@ -124,7 +124,7 @@ const CompanyPage = () => {
                               }}
                             >
                               <NavLink to={`/admin/company-form/edit/${id}`}>
-                                <Button style={{ backgroundColor: "pink" }}>
+                                <Button style={{ backgroundColor: "white" }}>
                                   Edit
                                 </Button>
                               </NavLink>

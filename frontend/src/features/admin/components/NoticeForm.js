@@ -148,7 +148,7 @@ const NoticeForm = () => {
                     id="noticeMsg"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -257,7 +257,7 @@ const NoticeForm = () => {
                     id="attachment1"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -310,7 +310,7 @@ const NoticeForm = () => {
                     id="attachment2"
                     placeholder="Enter ...."
                     style={{
-                      borderBottom: "2.5px solid pink",
+                      borderBottom: "2.5px solid white",
                       color: "black",
                       width: "83.8vw",
                       padding: "1.2vh",
@@ -325,7 +325,7 @@ const NoticeForm = () => {
                 <Button
                   onClick={handleClick}
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     width: "10vw",
                     fontSize: "20px",
                     marginRight: "3%",
@@ -336,7 +336,7 @@ const NoticeForm = () => {
                 <Button
                   type="submit"
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     width: "10vw",
                     fontSize: "20px",
                   }}
@@ -349,7 +349,7 @@ const NoticeForm = () => {
                 <Button
                   type="submit"
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     width: "10vw",
                     fontSize: "20px",
                   }}

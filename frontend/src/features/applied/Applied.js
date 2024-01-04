@@ -34,8 +34,8 @@ export function Applied() {
               width: "90vw",
               padding: "1vh 2vh",
               margin: "4vh",
-              background: "#242526",
-              borderRadius: "30px",
+              background: "lightblue",
+              // borderRadius: "30px",
             }}
           >
             <div
@@ -61,7 +61,7 @@ export function Applied() {
                     justifyContent: "center",
                     alignItems: "center",
                     background: "transparent",
-                    color: "pink",
+                    color: "white",
                     fontSize: "30px",
                   }}
                 >
@@ -75,7 +75,7 @@ export function Applied() {
                   background: "transparent",
                   height: "93%",
                   overflow: "auto",
-                  borderRadius: "30px",
+                  // borderRadius: "30px",
                 }}
               >
                 {appliedComp.map((currElem) => {

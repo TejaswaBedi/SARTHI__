@@ -10,10 +10,10 @@ const Header = ({ heading1, heading2, heading3 }) => {
         margin: "2vh 4vh",
         padding: "1vh 2vh",
 
-        background: "#242526",
+        background: "blue",
+        // background: "lightblue",
         border: "red 2px",
-        borderRadius: "30px",
-        //   background : '#000000'
+        // borderRadius: "30px",
       }}
     >
       <div
@@ -39,7 +39,8 @@ const Header = ({ heading1, heading2, heading3 }) => {
           fontFamily: "Anton, sans-serif",
           fontSize: "5vh",
           background: "transparent",
-          color: "pink",
+          color: "white",
+          // color: "white",
 
           display: "flex",
           alignItems: "center",
@@ -54,7 +55,8 @@ const Header = ({ heading1, heading2, heading3 }) => {
           height: "30%",
           fontSize: "2vh",
           background: "transparent",
-          color: "#718096",
+          color: "white",
+          // color: "#718096",
 
           display: "flex",
           alignItems: "center",

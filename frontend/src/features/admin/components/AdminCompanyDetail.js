@@ -83,7 +83,7 @@ export function AdminCompanyDetail() {
                 <div className="tagTitle">COMPANY NAME</div>
                 <div
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     height: "1%",
                     width: "90%",
                   }}
@@ -97,7 +97,7 @@ export function AdminCompanyDetail() {
                 <div className="tagTitle">COMPANY TYPE</div>
                 <div
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     height: "1%",
                     width: "90%",
                   }}
@@ -114,7 +114,7 @@ export function AdminCompanyDetail() {
                 <div className="tagTitle">COMPANY CTC</div>
                 <div
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     height: "1%",
                     width: "90%",
                   }}
@@ -131,7 +131,7 @@ export function AdminCompanyDetail() {
                 <div className="tagTitle">DATE OF ARRIVAL</div>
                 <div
                   style={{
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                     height: "1%",
                     width: "90%",
                   }}

@@ -36,8 +36,8 @@ const HomePage = () => {
               width: "90vw",
               padding: "1vh 2vh",
               margin: "4vh",
-              background: "#242526",
-              borderRadius: "30px",
+              background: "lightblue",
+              // borderRadius: "30px",
             }}
           >
             <Company title="UPCOMING COMPANIES" />

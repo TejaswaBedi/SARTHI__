@@ -29,8 +29,8 @@ const User = () => {
             width: "90vw",
             padding: "1vh 2vh",
             margin: "4vh",
-            background: "#242526",
-            borderRadius: "30px",
+            background: "lightblue",
+            //borderRadius: "30px",
           }}
         >
           <form
@@ -86,7 +86,7 @@ const User = () => {
                   style={{
                     width: "150%",
                     marginLeft: "-50%",
-                    borderBottom: "2px solid pink",
+                    borderBottom: "2px solid white",
                   }}
                 />
               </div>
@@ -139,7 +139,7 @@ const User = () => {
                   style={{
                     width: "150%",
                     marginLeft: "-50%",
-                    borderBottom: "2px solid pink",
+                    borderBottom: "2px solid white",
                   }}
                 />
               </div>
@@ -197,7 +197,7 @@ const User = () => {
                   style={{
                     width: "150%",
                     marginLeft: "-50%",
-                    borderBottom: "2px solid pink",
+                    borderBottom: "2px solid white",
                   }}
                 />
               </div>
@@ -248,7 +248,7 @@ const User = () => {
                   style={{
                     width: "150%",
                     marginLeft: "-50%",
-                    borderBottom: "2px solid pink",
+                    borderBottom: "2px solid white",
                   }}
                 />
               </div>
@@ -301,7 +301,7 @@ const User = () => {
                   style={{
                     width: "150%",
                     marginLeft: "-50%",
-                    borderBottom: "2px solid pink",
+                    borderBottom: "2px solid white",
                   }}
                 />
               </div>
@@ -354,7 +354,7 @@ const User = () => {
                   style={{
                     width: "150%",
                     marginLeft: "-50%",
-                    borderBottom: "2px solid pink",
+                    borderBottom: "2px solid white",
                   }}
                 />
               </div>
@@ -407,7 +407,7 @@ const User = () => {
                   style={{
                     width: "150%",
                     marginLeft: "-50%",
-                    borderBottom: "2px solid pink",
+                    borderBottom: "2px solid white",
                   }}
                 />
               </div>
@@ -460,7 +460,7 @@ const User = () => {
                   style={{
                     width: "150%",
                     marginLeft: "-50%",
-                    borderBottom: "2px solid pink",
+                    borderBottom: "2px solid white",
                   }}
                 />
               </div>
@@ -513,7 +513,7 @@ const User = () => {
                   style={{
                     width: "150%",
                     marginLeft: "-50%",
-                    borderBottom: "2px solid pink",
+                    borderBottom: "2px solid white",
                   }}
                 />
               </div>
@@ -566,7 +566,7 @@ const User = () => {
                   style={{
                     width: "150%",
                     marginLeft: "-50%",
-                    borderBottom: "2px solid pink",
+                    borderBottom: "2px solid white",
                   }}
                 />
               </div>
@@ -574,7 +574,7 @@ const User = () => {
             <div style={{ textAlign: "center" }}>
               <Button
                 type="submit"
-                style={{ backgroundColor: "pink", fontSize: "1.2rem" }}
+                style={{ backgroundColor: "white", fontSize: "1.2rem" }}
               >
                 Submit
               </Button>

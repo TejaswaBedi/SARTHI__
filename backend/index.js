@@ -23,7 +23,7 @@ server.get("/", (req, res) => {
 });
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/sarthi")
+  .connect("mongodb+srv://tejaswa1234bedi:tejaswa@cluster0.afezkru.mongodb.net/sarthi?retryWrites=true&w=majority")
   .then(() => {
     console.log("Connected to Database");
   })

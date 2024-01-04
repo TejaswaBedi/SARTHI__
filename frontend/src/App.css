@@ -1,5 +1,6 @@
 body {
-  background: gray;
+  /* background: gray; */
+  background: white;
   margin: 0;
   padding: 0;
 }
@@ -8,7 +9,8 @@ body {
   height: 100vh;
   width: 300vh;
   display: flex;
-  background: gray;
+  background: white;
+  /* background: gray; */
 }
 
 .navBarSpace {

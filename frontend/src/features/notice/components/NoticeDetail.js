@@ -21,9 +21,9 @@ const NoticeDetail = () => {
               width: "90vw",
               margin: "2vh 8vh",
               padding: "2vh",
-              background: "#242526",
+              background: "lightblue",
               border: "red 2px",
-              borderRadius: "30px",
+              //borderRadius: "30px",
             }}
           >
             <div style={{ color: "white", fontSize: "24px" }}>
@@ -50,9 +50,9 @@ const NoticeDetail = () => {
                 width: "90vw",
                 margin: "2vh 8vh",
                 padding: "2vh",
-                background: "#242526",
+                background: "lightblue",
                 border: "red 2px",
-                borderRadius: "30px",
+                //borderRadius: "30px",
               }}
             >
               <div className="header-main" style={{ marginLeft: "-4vh" }}>

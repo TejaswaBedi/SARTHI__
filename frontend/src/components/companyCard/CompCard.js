@@ -20,7 +20,7 @@ const CompanyCard = (props) => {
             height: "30vh",
             margin: "2% 0",
             background: "white",
-            borderRadius: "30px",
+            //borderRadius: "30px",
           }}
         >
           <div className="company-name">{props.name}</div>
@@ -121,7 +121,7 @@ const CompanyCard = (props) => {
             height: "30vh",
             margin: "2% 0",
             background: "white",
-            borderRadius: "30px",
+            //borderRadius: "30px",
           }}
         >
           <div className="company-name">{props.name}</div>
@@ -193,7 +193,7 @@ const CompanyCard = (props) => {
             height: "30vh",
             margin: "2% 0",
             background: "white",
-            borderRadius: "30px",
+            //borderRadius: "30px",
           }}
         >
           <div className="company-name">{props.name}</div>
@@ -294,7 +294,7 @@ const CompanyCard = (props) => {
             height: "30vh",
             margin: "2% 0",
             background: "white",
-            borderRadius: "30px",
+            //borderRadius: "30px",
           }}
         >
           <div className="company-name">{props.name}</div>

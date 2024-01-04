@@ -36,7 +36,7 @@ export function Company({ title }) {
               justifyContent: "center",
               alignItems: "center",
               background: "transparent",
-              color: "pink",
+              color: "white",
               fontSize: "30px",
             }}
           >

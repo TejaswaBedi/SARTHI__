@@ -22,8 +22,8 @@ const UserDetail = () => {
           width: "90vw",
           padding: "1vh 2vh",
           margin: "4vh",
-          background: "#242526",
-          borderRadius: "30px",
+          // background: "lightblue",
+          // borderRadius: "30px",
         }}
       >
         <div
@@ -32,7 +32,7 @@ const UserDetail = () => {
             height: "10%",
             width: "85vw",
             background: "white",
-            borderRadius: "10px",
+            // borderRadius: "10px",
             margin: "1.5vh 3vh",
             padding: "1vh 1vh",
             justifyContent: "space-between",
@@ -71,7 +71,7 @@ const UserDetail = () => {
                   height: "10%",
                   width: "85vw",
                   background: "white",
-                  borderRadius: "10px",
+                  // borderRadius: "10px",
                   margin: "1.5vh 3vh",
                   padding: "1vh 1vh",
                   justifyContent: "space-between",
