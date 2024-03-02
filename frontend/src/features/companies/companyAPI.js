@@ -16,7 +16,6 @@ export function fetchCompanyById(id) {
 }
 
 export function createCompany(company) {
-  console.log("fro", company, company.attachment1);
   const formData = new FormData();
   formData.append("attachment1", company.attachment1);
   formData.append("backlogs", company.backlogs);
@@ -43,14 +42,26 @@ export function createCompany(company) {
 }
 
 export function updateCompany(update) {
-  console.log("upd", update);
+  const formData = new FormData();
+  formData.append("attachment1", update.attachment1);
+  formData.append("backlogs", update["backlogs"]);
+  formData.append("cgpa", update.cgpa);
+  formData.append("ctc", update.ctc);
+  formData.append("description", update.description);
+  formData.append("field", update.field);
+  formData.append("name", update.name);
+  formData.append("scheduled", update.scheduled);
+  formData.append("ten", update.ten);
+  formData.append("twelve", update.twelve);
+  formData.append("type", update.type);
+  formData.append("url", update.url);
+  formData.append("vacancy", update.vacancy);
   return new Promise(async (resolve) => {
     const response = await fetch(
       "http://localhost:8080/companyList/" + update.id,
       {
         method: "PATCH",
-        body: JSON.stringify(update),
-        headers: { "Content-Type": "application/json" },
+        body: formData,
       }
     );
     const data = await response.json();

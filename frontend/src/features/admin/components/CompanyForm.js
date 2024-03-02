@@ -74,7 +74,7 @@ const CompanyForm = () => {
       setValue("ten", company.ten);
       setValue("twelve", company.twelve);
       setValue("backlogs", company.backlogs);
-      // setValue("attachment1", company.attachment1);
+      setValue("attachment1", company.attachment1);
     }
   }, [company, params.id]);
   // File change handler
@@ -101,8 +101,10 @@ const CompanyForm = () => {
             noValidate
             onSubmit={handleSubmit((data) => {
               const company = { ...data };
-              company.attachment1 = attachment1;
-              setAttachment1(null);
+              if (attachment1) {
+                company.attachment1 = attachment1;
+                setAttachment1(null);
+              }
               reset();
               if (params.id) {
                 company.id = params.id;

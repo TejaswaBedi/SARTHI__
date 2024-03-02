@@ -12,6 +12,6 @@ const router = express.Router();
 router.post("/", upload.single("attachment1"), createCompany);
 router.get("/", fetchAllCompanies);
 router.get("/:id", fetchCompanyById);
-router.patch("/:id", updateCompany);
+router.patch("/:id", upload.single("attachment1"), updateCompany);
 
 exports.router = router;

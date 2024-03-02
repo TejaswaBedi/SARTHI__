@@ -207,7 +207,7 @@ export function CompanyDetail() {
                 {company.attachment1 ? (
                   <>
                     <button onClick={() => showFile(company.attachment1)}>
-                      Attachment
+                      {company.attachment1}
                     </button>
                   </>
                 ) : (

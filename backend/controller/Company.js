@@ -1,10 +1,13 @@
 const { Company } = require("../model/Company");
 
 exports.createCompany = async (req, res) => {
-  const companyData = req.body;
-  companyData.attachment1 = req.file.filename;
-  const company = new Company(companyData);
   try {
+    const companyData = req.body;
+    console.log("com", companyData);
+    if (req.file) {
+      companyData.attachment1 = req.file.filename;
+    }
+    const company = new Company(companyData);
     const response = await company.save();
     res.status(200).json(response);
   } catch (err) {
@@ -35,8 +38,14 @@ exports.fetchCompanyById = async (req, res) => {
 
 exports.updateCompany = async (req, res) => {
   try {
+    const companyData = req.body;
+    console.log("com", req.body);
+    if (req.file) {
+      console.log(req.file);
+      companyData.attachment1 = req.file.filename;
+    }
     const { id } = req.params;
-    const company = await Company.findByIdAndUpdate(id, req.body, {
+    const company = await Company.findByIdAndUpdate(id, companyData, {
       new: true,
     });
     res.status(200).json(company);

@@ -52,6 +52,14 @@ export function AdminCompanyDetail() {
   useEffect(() => {
     dispatch(fetchCompanyByIdAsync(params.id));
   }, [dispatch, params.id]);
+  const showFile = (attachedFile) => {
+    console.log(attachedFile);
+    window.open(
+      `http://localhost:8080/files/${attachedFile}`,
+      "_blank",
+      "noreferrer"
+    );
+  };
   return (
     <>
       {company && (
@@ -189,10 +197,18 @@ export function AdminCompanyDetail() {
                   padding: "0 2vh",
                   marginTop: "1vh",
                   marginLeft: "2vh",
-                  borderRadius: "20px",
+                  // borderRadius: "20px",
                 }}
               >
-                JDs and Forms
+                {company.attachment1 ? (
+                  <>
+                    <button onClick={() => showFile(company.attachment1)}>
+                      {company.attachment1}
+                    </button>
+                  </>
+                ) : (
+                  "JDs and Forms"
+                )}
               </div>
             </div>
             <div
