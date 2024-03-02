@@ -79,7 +79,7 @@ export function AdminCompany({ title }) {
                     <CompanyCard key={id} {...currElem} />
                   </NavLink>
 
-                  {currElem.deleted && (
+                  {currElem.deleted ? (
                     <p
                       style={{
                         color: "red",
@@ -90,18 +90,21 @@ export function AdminCompany({ title }) {
                     >
                       <strong>Company Deleted</strong>
                     </p>
+                  ) : (
+                    <div
+                      style={{
+                        textAlign: "right",
+                        marginTop: "-1%",
+                        marginRight: "2%",
+                      }}
+                    >
+                      <NavLink to={`/admin/company-form/edit/${id}`}>
+                        <Button style={{ backgroundColor: "white" }}>
+                          Edit
+                        </Button>
+                      </NavLink>
+                    </div>
                   )}
-                  <div
-                    style={{
-                      textAlign: "right",
-                      marginTop: "-1%",
-                      marginRight: "2%",
-                    }}
-                  >
-                    <NavLink to={`/admin/company-form/edit/${id}`}>
-                      <Button style={{ backgroundColor: "white" }}>Edit</Button>
-                    </NavLink>
-                  </div>
                 </>
               );
             } else {
