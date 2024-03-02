@@ -1,7 +1,9 @@
 const { Company } = require("../model/Company");
 
 exports.createCompany = async (req, res) => {
-  const company = new Company(req.body);
+  const companyData = req.body;
+  companyData.attachment1 = req.file.filename;
+  const company = new Company(companyData);
   try {
     const response = await company.save();
     res.status(200).json(response);

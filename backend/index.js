@@ -10,6 +10,7 @@ const userAppliedRouter = require("./routes/UserApplied");
 const server = express();
 
 //Middlewares
+server.use("/files", express.static("files"));
 server.use(cors());
 server.use(express.json());
 server.use("/companyList", companyRouter.router);

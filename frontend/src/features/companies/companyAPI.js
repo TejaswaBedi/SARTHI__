@@ -16,12 +16,25 @@ export function fetchCompanyById(id) {
 }
 
 export function createCompany(company) {
-  console.log("fro", company);
+  console.log("fro", company, company.attachment1);
+  const formData = new FormData();
+  formData.append("attachment1", company.attachment1);
+  formData.append("backlogs", company.backlogs);
+  formData.append("cgpa", company.cgpa);
+  formData.append("ctc", company.ctc);
+  formData.append("description", company.description);
+  formData.append("field", company.field);
+  formData.append("name", company.name);
+  formData.append("scheduled", company.scheduled);
+  formData.append("ten", company.ten);
+  formData.append("twelve", company.twelve);
+  formData.append("type", company.type);
+  formData.append("url", company.url);
+  formData.append("vacancy", company.vacancy);
   return new Promise(async (resolve) => {
     const response = await fetch("http://localhost:8080/companyList/", {
       method: "POST",
-      body: JSON.stringify(company),
-      headers: { "Content-Type": "application/json" },
+      body: formData,
     });
     console.log("res", response);
     const data = await response.json();

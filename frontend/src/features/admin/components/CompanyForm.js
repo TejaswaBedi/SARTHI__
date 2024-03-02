@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -25,6 +25,7 @@ const CompanyForm = () => {
   const dispatch = useDispatch();
   const company = useSelector(selectedCompanyById);
   const params = useParams();
+  const [attachment1, setAttachment1] = useState(null);
   const handleDelete = () => {
     const delComp = { ...company };
     delComp.deleted = true;
@@ -73,8 +74,15 @@ const CompanyForm = () => {
       setValue("ten", company.ten);
       setValue("twelve", company.twelve);
       setValue("backlogs", company.backlogs);
+      // setValue("attachment1", company.attachment1);
     }
   }, [company, params.id]);
+  // File change handler
+  const handleFileChange = (event) => {
+    console.log("Handl", event.target.files[0]);
+    const file = event.target.files[0];
+    setAttachment1(file);
+  };
   return (
     <div>
       <div className="flex items-center justify-center p-12">
@@ -93,9 +101,8 @@ const CompanyForm = () => {
             noValidate
             onSubmit={handleSubmit((data) => {
               const company = { ...data };
-              company.attachments = [company.attachment1, company.attachment2];
-              delete company["attachment1"];
-              delete company["attachment2"];
+              company.attachment1 = attachment1;
+              setAttachment1(null);
               reset();
               if (params.id) {
                 company.id = params.id;
@@ -590,7 +597,7 @@ const CompanyForm = () => {
                 >
                   <input
                     type="file"
-                    {...register("attachment1")}
+                    onChange={handleFileChange}
                     id="attachment1"
                     placeholder="Enter ...."
                     style={{
@@ -603,7 +610,7 @@ const CompanyForm = () => {
                 </div>
               </div>
             </div>
-            <div
+            {/* <div
               className="subCard"
               style={{
                 height: "10%",
@@ -655,7 +662,7 @@ const CompanyForm = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
             <span
               style={{ color: "white", marginLeft: "3vh", fontSize: "20px" }}
             >

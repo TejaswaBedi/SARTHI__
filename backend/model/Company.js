@@ -7,7 +7,7 @@ const companySchema = new Schema(
     field: { type: String },
     scheduled: { type: String },
     ctc: { type: String },
-    // attachments: { type: [String], default: {} },
+    attachment1: { type: String },
     description: { type: String },
     type: { type: String },
     url: { type: String, default: "" },

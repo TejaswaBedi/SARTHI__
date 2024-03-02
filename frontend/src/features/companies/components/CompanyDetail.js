@@ -55,8 +55,17 @@ export function CompanyDetail() {
     dispatch(fetchCompanyByIdAsync(params.id));
     dispatch(fetchCompaniesByUserIdAsync(user.id));
   }, [params.id, dispatch]);
+  const showFile = (attachedFile) => {
+    console.log(attachedFile);
+    window.open(
+      `http://localhost:8080/files/${attachedFile}`,
+      "_blank",
+      "noreferrer"
+    );
+  };
   return (
     <>
+      {console.log(company)}
       {company && (
         <div className="main-wrapper">
           <div className="navBarSpace"></div>
@@ -195,7 +204,15 @@ export function CompanyDetail() {
                   // borderRadius: "20px",
                 }}
               >
-                JDs and Forms
+                {company.attachment1 ? (
+                  <>
+                    <button onClick={() => showFile(company.attachment1)}>
+                      Attachment
+                    </button>
+                  </>
+                ) : (
+                  "JDs and Forms"
+                )}
               </div>
             </div>
             <div
