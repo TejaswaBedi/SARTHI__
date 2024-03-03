@@ -12,8 +12,21 @@ exports.fetchAllNotices = async (req, res) => {
 };
 
 exports.createNotice = async (req, res) => {
-  const notice = new Notice(req.body);
   try {
+    console.log(req.body, req.file);
+    const noticeData = req.body;
+    if (req.files.length == 0) {
+      noticeData.noticeAttachs = [];
+    }
+    if (req.files.length > 0) {
+      const attachments = [];
+      const attachFiles = req.files;
+      for (let idx = 0; idx < attachFiles.length; idx++) {
+        attachments.push(attachFiles[idx].filename);
+      }
+      noticeData.noticeAttachs = attachments;
+    }
+    const notice = new Notice(noticeData);
     const response = await notice.save();
     res.status(200).json(response);
   } catch (err) {
@@ -33,6 +46,15 @@ exports.fetchNoticeById = async (req, res) => {
 
 exports.updateNotice = async (req, res) => {
   try {
+    const noticeData = req.body;
+    if (req.files.length > 0) {
+      const attachments = [];
+      const attachFiles = req.files;
+      for (let idx = 0; idx < attachFiles.length; idx++) {
+        attachments.push(attachFiles[idx].filename);
+      }
+      noticeData.noticeAttachs = attachments;
+    }
     const { id } = req.params;
     const notice = await Notice.findByIdAndUpdate(id, req.body, {
       new: true,

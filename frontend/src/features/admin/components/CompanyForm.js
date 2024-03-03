@@ -30,6 +30,7 @@ const CompanyForm = () => {
   const handleDelete = () => {
     const delComp = { ...company };
     delComp.deleted = true;
+    console.log("dle", delComp);
     dispatch(updateCompanyAsync(delComp));
     alert.info("Company deleted succesfully.");
   };

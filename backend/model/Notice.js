@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const noticeSchema = new Schema(
   {
     noticeMsg: { type: String, required: true },
-    // attachments: { type: [String] },
+    noticeAttachs: { type: [String], default: [] },
     description: { type: String, required: true },
     deleted: { type: Boolean, default: false },
   },

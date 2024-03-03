@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { fetchNoticeByIdAsync, selectNotice } from "../noticeSlice";
 import { PictureAsPdf } from "@mui/icons-material";
+import { Button } from "@mui/material";
 
 const NoticeDetail = () => {
   const dispatch = useDispatch();
@@ -11,6 +12,14 @@ const NoticeDetail = () => {
   useEffect(() => {
     dispatch(fetchNoticeByIdAsync(params.id));
   }, [dispatch, params.id]);
+  const showFile = (attachedFile) => {
+    console.log(attachedFile);
+    window.open(
+      `http://localhost:8080/files/${attachedFile}`,
+      "_blank",
+      "noreferrer"
+    );
+  };
   return (
     <>
       {notice && (
@@ -43,45 +52,56 @@ const NoticeDetail = () => {
               {notice.description}
             </div>
           </div>
-          {notice.attachments ? (
+          <div
+            className="header_wrapper"
+            style={{
+              width: "90vw",
+              margin: "2vh 8vh",
+              padding: "2vh",
+              background: "lightblue",
+              border: "red 2px",
+              //borderRadius: "30px",
+            }}
+          >
+            <div className="header-main" style={{ marginLeft: "-4vh" }}>
+              ATTACHMENTS
+            </div>
             <div
-              className="header_wrapper"
               style={{
-                width: "90vw",
-                margin: "2vh 8vh",
-                padding: "2vh",
-                background: "lightblue",
-                border: "red 2px",
-                //borderRadius: "30px",
+                height: "20%",
+                width: "98%",
+                background: "white",
+                padding: "2vh 2vh",
+                marginTop: "1vh",
+                marginLeft: "2vh",
+                borderRadius: "20px",
               }}
             >
-              <div className="header-main" style={{ marginLeft: "-4vh" }}>
-                ATTACHMENTS
-              </div>
-              <div
-                style={{
-                  height: "20%",
-                  width: "98%",
-                  background: "white",
-                  padding: "2vh 2vh",
-                  marginTop: "1vh",
-                  marginLeft: "2vh",
-                  borderRadius: "20px",
-                }}
-              >
-                {notice.attachments.map((attachment) => (
-                  <>
-                    {Object.entries(attachment)[0][1] && (
-                      <span>
-                        <PictureAsPdf />
-                        {Object.entries(attachment)[0][1]}
-                      </span>
-                    )}
-                  </>
-                ))}
-              </div>
+              {notice.noticeAttachs && notice.noticeAttachs.length ? (
+                <>
+                  {notice.noticeAttachs.map((attachment) => (
+                    <>
+                      <Button
+                        style={{
+                          backgroundColor: "rgb(198, 198, 198)",
+                          color: "black",
+                          fontWeight: "bold",
+                          fontSize: "12px",
+                        }}
+                        onClick={() => showFile(attachment)}
+                      >
+                        {attachment} ⬇️
+                      </Button>
+                      <br />
+                      <br />
+                    </>
+                  ))}
+                </>
+              ) : (
+                "No attachments"
+              )}
             </div>
-          ) : null}
+          </div>
         </div>
       )}
     </>

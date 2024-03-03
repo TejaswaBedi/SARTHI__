@@ -69,6 +69,9 @@ export function updateCompany(update) {
   formData.append("type", update.type);
   formData.append("url", update.url);
   formData.append("vacancy", update.vacancy);
+  if (update.deleted) {
+    formData.append("deleted", true);
+  }
   return new Promise(async (resolve) => {
     const response = await fetch(
       "http://localhost:8080/companyList/" + update.id,

@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -20,21 +20,31 @@ const NoticeForm = () => {
     reset,
     setValue,
     formState: { errors },
-  } = useForm({
-    defaultValues: {
-      compAttachs: { 0: "" },
-      attachment2: { 1: "" },
-    },
-  });
+  } = useForm();
   const alert = useAlert();
   const dispatch = useDispatch();
   const params = useParams();
   const notice = useSelector(selectNotice);
+  const [noticeAttach, setNoticeAttach] = useState(null);
+  const attachArr = [];
   const handleDelete = () => {
     const delNote = { ...notice };
     delNote.deleted = true;
     dispatch(updateNoticeAsync(delNote));
     alert.info("Notice deleted succesfully.");
+  };
+  const handleFileChange = (event) => {
+    console.log("Handl", event.target.files[0]);
+    const files = event.target.files;
+    console.log(files);
+    console.log();
+    for (let idx = 0; idx < files.length; idx++) {
+      attachArr.push(files[idx]);
+      console.log(attachArr);
+    }
+    const file = event.target.files[0];
+    console.log(attachArr, file);
+    setNoticeAttach(attachArr);
   };
   const handleClick = () => {
     Swal.fire({
@@ -65,8 +75,10 @@ const NoticeForm = () => {
     if (selectNotice && params.id) {
       setValue("noticeMsg", notice.noticeMsg);
       setValue("description", notice.description);
+      setValue("noticeAttachs", notice.noticeAttachs);
     }
   }, [notice, params.id]);
+
   return (
     <div>
       <div className="flex items-center justify-center p-12">
@@ -85,9 +97,13 @@ const NoticeForm = () => {
             noValidate
             onSubmit={handleSubmit((data) => {
               const notice = { ...data };
-              notice.attachments = [notice.compAttachs, notice.attachment2];
-              delete notice["compAttachs"];
-              delete notice["attachment2"];
+              if (noticeAttach) {
+                notice.noticeAttachs = noticeAttach;
+                setNoticeAttach(null);
+              } else {
+                notice.noticeAttachs = [];
+                setNoticeAttach(null);
+              }
               if (params.id) {
                 notice.id = params.id;
                 dispatch(updateNoticeAsync(notice));
@@ -237,10 +253,10 @@ const NoticeForm = () => {
                 }}
               >
                 <label
-                  htmlFor="compAttachs"
+                  htmlFor="noticeAttachs"
                   className="mb-3 block text-base font-medium text-[#07074D]"
                 >
-                  Attach 1
+                  File/s
                 </label>
                 <br></br>
                 <div
@@ -252,62 +268,10 @@ const NoticeForm = () => {
                   }}
                 >
                   <input
+                    multiple
                     type="file"
-                    {...register("compAttachs")}
-                    id="compAttachs"
-                    placeholder="Enter ...."
-                    style={{
-                      borderBottom: "2.5px solid white",
-                      color: "black",
-                      width: "83.8vw",
-                      padding: "1.2vh",
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              className="subCard"
-              style={{
-                height: "10%",
-                width: "85vw",
-                background: "white",
-                borderRadius: "10px",
-                margin: "1.5vh 3vh",
-                padding: "1vh 1vh",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <div
-                className="title"
-                style={{
-                  background: "transparent",
-                  fontSize: "1rem",
-                  fontWeight: "bold",
-                  color: "gray",
-                }}
-              >
-                <label
-                  htmlFor="attachment2"
-                  className="mb-3 block text-base font-medium text-[#07074D]"
-                >
-                  Attach 2
-                </label>
-                <br></br>
-                <div
-                  className="info"
-                  style={{
-                    background: "transparent",
-                    fontSize: "1.2rem",
-                    fontWeight: "bold",
-                  }}
-                >
-                  <input
-                    type="file"
-                    {...register("attachment2")}
-                    id="attachment2"
+                    onChange={handleFileChange}
+                    id="noticeAttachs"
                     placeholder="Enter ...."
                     style={{
                       borderBottom: "2.5px solid white",
