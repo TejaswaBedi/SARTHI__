@@ -3,6 +3,10 @@ const { Company } = require("../model/Company");
 exports.createCompany = async (req, res) => {
   try {
     const companyData = req.body;
+
+    if (req.files.length == 0) {
+      companyData.compAttachs = [];
+    }
     if (req.files.length > 0) {
       const attachments = [];
       const attachFiles = req.files;
@@ -43,7 +47,6 @@ exports.fetchCompanyById = async (req, res) => {
 exports.updateCompany = async (req, res) => {
   try {
     const companyData = req.body;
-    console.log("com", req.body, req.files);
     if (req.files.length > 0) {
       const attachments = [];
       const attachFiles = req.files;
@@ -52,9 +55,7 @@ exports.updateCompany = async (req, res) => {
       }
       companyData.compAttachs = attachments;
     }
-    console.log("update", companyData);
     const { id } = req.params;
-    console.log(id);
     const company = await Company.findByIdAndUpdate(id, companyData, {
       new: true,
     });

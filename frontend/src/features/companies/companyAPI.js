@@ -16,7 +16,11 @@ export function fetchCompanyById(id) {
 }
 
 export function createCompany(company) {
+  console.log(company);
   const formData = new FormData();
+  if (company.compAttachs.length === 0) {
+    formData.append("compAttachs", []);
+  }
   if (company.compAttachs.length > 0) {
     for (let i = 0; i < company.compAttachs.length; i++) {
       formData.append("compAttachs", company.compAttachs[i]);
@@ -35,7 +39,6 @@ export function createCompany(company) {
   formData.append("url", company.url);
   formData.append("vacancy", company.vacancy);
   console.log("fromd", ...formData);
-  console.log("cpAtt", company.compAttachs[0].name);
   return new Promise(async (resolve) => {
     const response = await fetch("http://localhost:8080/companyList/", {
       method: "POST",
@@ -66,7 +69,6 @@ export function updateCompany(update) {
   formData.append("type", update.type);
   formData.append("url", update.url);
   formData.append("vacancy", update.vacancy);
-  console.log(...formData);
   return new Promise(async (resolve) => {
     const response = await fetch(
       "http://localhost:8080/companyList/" + update.id,

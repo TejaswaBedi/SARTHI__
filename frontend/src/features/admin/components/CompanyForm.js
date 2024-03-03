@@ -113,6 +113,10 @@ const CompanyForm = () => {
               if (compAttachs) {
                 company.compAttachs = compAttachs;
                 setcompAttachs(null);
+              } else {
+                console.log("null chaal");
+                company.compAttachs = [];
+                setcompAttachs(null);
               }
               reset();
               if (params.id) {
@@ -122,6 +126,7 @@ const CompanyForm = () => {
                 alert.success("Company updated succesfully.");
                 reset();
               } else {
+                console.log(company);
                 dispatch(createCompanyAsync(company));
                 alert.success("Company added succesfully.");
                 reset();
@@ -595,7 +600,7 @@ const CompanyForm = () => {
                   htmlFor="compAttachs"
                   className="mb-3 block text-base font-medium text-[#07074D]"
                 >
-                  Attach 1
+                  File/s
                 </label>
                 <br></br>
                 <div
@@ -622,59 +627,6 @@ const CompanyForm = () => {
                 </div>
               </div>
             </div>
-            {/* <div
-              className="subCard"
-              style={{
-                height: "10%",
-                width: "85vw",
-                background: "white",
-                borderRadius: "10px",
-                margin: "1.5vh 3vh",
-                padding: "1vh 1vh",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <div
-                className="title"
-                style={{
-                  background: "transparent",
-                  fontSize: "1rem",
-                  fontWeight: "bold",
-                  color: "gray",
-                }}
-              >
-                <label
-                  htmlFor="attachment2"
-                  className="mb-3 block text-base font-medium text-[#07074D]"
-                >
-                  Attach 2
-                </label>
-                <br></br>
-                <div
-                  className="info"
-                  style={{
-                    background: "transparent",
-                    fontSize: "1.2rem",
-                    fontWeight: "bold",
-                  }}
-                >
-                  <input
-                    type="file"
-                    {...register("attachment2")}
-                    id="attachment2"
-                    placeholder="Enter ...."
-                    style={{
-                      borderBottom: "2.5px solid white",
-                      color: "black",
-                      width: "83.8vw",
-                      padding: "1.2vh",
-                    }}
-                  />
-                </div>
-              </div>
-            </div> */}
             <span
               style={{ color: "white", marginLeft: "3vh", fontSize: "20px" }}
             >

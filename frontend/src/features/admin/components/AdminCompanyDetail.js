@@ -25,21 +25,25 @@ export function AdminCompanyDetail() {
         id: 1,
         title: `CGPA`,
         info: company.cgpa,
+        default: "7",
       },
       {
         id: 2,
         title: `10TH MARK'S PERCENTAGE`,
         info: company.ten,
+        default: "70",
       },
       {
         id: 3,
         title: `12TH MARK'S PERCENTAGE`,
         info: company.twelve,
+        default: "70",
       },
       {
         id: 4,
         title: `BACKLOGS`,
         info: company.backlogs,
+        default: "0",
       },
     ];
   }
@@ -110,7 +114,9 @@ export function AdminCompanyDetail() {
                     width: "90%",
                   }}
                 ></div>
-                <div className="tagName">{company.field}</div>
+                <div className="tagName">
+                  {company.field ? company.field : "Service"}
+                </div>
               </div>
               <div className="companyCTC infoField">
                 <div className="icon-wrapper">
@@ -127,7 +133,9 @@ export function AdminCompanyDetail() {
                     width: "90%",
                   }}
                 ></div>
-                <div className="tagName">{company.ctc}</div>
+                <div className="tagName">
+                  {company.ctc ? company.ctc : "Unknown"}
+                </div>
               </div>
               <div className="companyDate infoField">
                 <div className="icon-wrapper">
@@ -144,7 +152,9 @@ export function AdminCompanyDetail() {
                     width: "90%",
                   }}
                 ></div>
-                <div className="tagName">{company.scheduled}</div>
+                <div className="tagName">
+                  {company.scheduled ? company.scheduled : "TBD"}
+                </div>
               </div>
             </div>
             <div
@@ -172,7 +182,9 @@ export function AdminCompanyDetail() {
                   borderRadius: "20px",
                 }}
               >
-                {company.description}
+                {company.description
+                  ? company.description
+                  : "Will be updated soon."}
               </div>
             </div>
             <div
@@ -194,22 +206,34 @@ export function AdminCompanyDetail() {
                   height: "20%",
                   width: "98%",
                   background: "white",
-                  padding: "0 2vh",
+                  padding: "2vh 2vh",
                   marginTop: "1vh",
                   marginLeft: "2vh",
-                  // borderRadius: "20px",
+                  borderRadius: "20px",
                 }}
               >
                 {company.compAttachs && company.compAttachs.length ? (
                   <>
                     {company.compAttachs.map((attachment) => (
-                      <button onClick={() => showFile(attachment)}>
-                        {attachment}
-                      </button>
+                      <>
+                        <Button
+                          style={{
+                            backgroundColor: "rgb(198, 198, 198)",
+                            color: "black",
+                            fontWeight: "bold",
+                            fontSize: "12px",
+                          }}
+                          onClick={() => showFile(attachment)}
+                        >
+                          {attachment} ⬇️
+                        </Button>
+                        <br />
+                        <br />
+                      </>
                     ))}
                   </>
                 ) : (
-                  "JDs and Forms"
+                  "No attachments"
                 )}
               </div>
             </div>
@@ -277,7 +301,7 @@ export function AdminCompanyDetail() {
                           fontWeight: "bold",
                         }}
                       >
-                        {currElem.info}
+                        {currElem.info ? currElem.info : currElem.default}
                       </div>
                     </div>
                   );

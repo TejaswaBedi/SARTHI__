@@ -39,7 +39,7 @@ const CompanyCard = (props) => {
                     background: "transparent",
                   }}
                 />{" "}
-                {props.field}
+                {props.field ? props.field : "Service"}
               </div>
               <div className="company-CTC">
                 <PaymentIcon
@@ -49,7 +49,7 @@ const CompanyCard = (props) => {
                     background: "transparent",
                   }}
                 />{" "}
-                {props.ctc}
+                {props.ctc ? props.ctc : "Unknown"}
               </div>
               <div className="company-drive-date">
                 <CalendarMonthIcon
@@ -59,7 +59,7 @@ const CompanyCard = (props) => {
                     background: "transparent",
                   }}
                 />{" "}
-                {props.scheduled}
+                {props.scheduled ? props.scheduled : "TBD"}
               </div>
             </div>
 
@@ -72,7 +72,7 @@ const CompanyCard = (props) => {
                     background: "transparent",
                   }}
                 />{" "}
-                {props.vacancy} Vacancies
+                {props.vacancy ? props.vacancy : "❔"} Vacancies
               </div>
               <div className="info-spare-1"></div>
               <div className="info-spare-2">
@@ -144,7 +144,7 @@ const CompanyCard = (props) => {
                     background: "transparent",
                   }}
                 />{" "}
-                {props.vacancy} Vacancies
+                {props.vacancy ? props.vacancy : "❔"} Vacancies
               </div>
               <div className="info-spare-1"></div>
               <div className="info-spare-2">
@@ -212,7 +212,7 @@ const CompanyCard = (props) => {
                     background: "transparent",
                   }}
                 />{" "}
-                {props.field}
+                {props.field ? props.field : "Service"}
               </div>
               <div className="company-CTC">
                 <PaymentIcon
@@ -222,7 +222,7 @@ const CompanyCard = (props) => {
                     background: "transparent",
                   }}
                 />{" "}
-                {props.ctc}
+                {props.ctc ? props.ctc : "Unknown"}
               </div>
               <div className="company-drive-date">
                 <CalendarMonthIcon
@@ -232,7 +232,7 @@ const CompanyCard = (props) => {
                     background: "transparent",
                   }}
                 />{" "}
-                {props.scheduled}
+                {props.scheduled ? props.scheduled : "TBD"}
               </div>
             </div>
 
@@ -245,7 +245,7 @@ const CompanyCard = (props) => {
                     background: "transparent",
                   }}
                 />{" "}
-                {props.vacancy} Vacancies
+                {props.vacancy ? props.vacancy : "❔"} Vacancies
               </div>
               <div className="info-spare-1"></div>
               <div className="info-spare-2">
@@ -317,7 +317,7 @@ const CompanyCard = (props) => {
                     background: "transparent",
                   }}
                 />{" "}
-                {props.vacancy} Vacancies
+                {props.vacancy ? props.vacancy : "❔"} Vacancies
               </div>
               <div className="info-spare-1"></div>
               <div className="info-spare-2">
