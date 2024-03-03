@@ -3,9 +3,13 @@ const { Company } = require("../model/Company");
 exports.createCompany = async (req, res) => {
   try {
     const companyData = req.body;
-    console.log("com", companyData);
-    if (req.file) {
-      companyData.attachment1 = req.file.filename;
+    if (req.files.length > 0) {
+      const attachments = [];
+      const attachFiles = req.files;
+      for (let idx = 0; idx < attachFiles.length; idx++) {
+        attachments.push(attachFiles[idx].filename);
+      }
+      companyData.compAttachs = attachments;
     }
     const company = new Company(companyData);
     const response = await company.save();
@@ -39,12 +43,18 @@ exports.fetchCompanyById = async (req, res) => {
 exports.updateCompany = async (req, res) => {
   try {
     const companyData = req.body;
-    console.log("com", req.body);
-    if (req.file) {
-      console.log(req.file);
-      companyData.attachment1 = req.file.filename;
+    console.log("com", req.body, req.files);
+    if (req.files.length > 0) {
+      const attachments = [];
+      const attachFiles = req.files;
+      for (let idx = 0; idx < attachFiles.length; idx++) {
+        attachments.push(attachFiles[idx].filename);
+      }
+      companyData.compAttachs = attachments;
     }
+    console.log("update", companyData);
     const { id } = req.params;
+    console.log(id);
     const company = await Company.findByIdAndUpdate(id, companyData, {
       new: true,
     });

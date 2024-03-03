@@ -22,7 +22,7 @@ const NoticeForm = () => {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      attachment1: { 0: "" },
+      compAttachs: { 0: "" },
       attachment2: { 1: "" },
     },
   });
@@ -85,8 +85,8 @@ const NoticeForm = () => {
             noValidate
             onSubmit={handleSubmit((data) => {
               const notice = { ...data };
-              notice.attachments = [notice.attachment1, notice.attachment2];
-              delete notice["attachment1"];
+              notice.attachments = [notice.compAttachs, notice.attachment2];
+              delete notice["compAttachs"];
               delete notice["attachment2"];
               if (params.id) {
                 notice.id = params.id;
@@ -237,7 +237,7 @@ const NoticeForm = () => {
                 }}
               >
                 <label
-                  htmlFor="attachment1"
+                  htmlFor="compAttachs"
                   className="mb-3 block text-base font-medium text-[#07074D]"
                 >
                   Attach 1
@@ -253,8 +253,8 @@ const NoticeForm = () => {
                 >
                   <input
                     type="file"
-                    {...register("attachment1")}
-                    id="attachment1"
+                    {...register("compAttachs")}
+                    id="compAttachs"
                     placeholder="Enter ...."
                     style={{
                       borderBottom: "2.5px solid white",

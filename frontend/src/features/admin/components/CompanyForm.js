@@ -25,7 +25,8 @@ const CompanyForm = () => {
   const dispatch = useDispatch();
   const company = useSelector(selectedCompanyById);
   const params = useParams();
-  const [attachment1, setAttachment1] = useState(null);
+  const [compAttachs, setcompAttachs] = useState(null);
+  const attachArr = [];
   const handleDelete = () => {
     const delComp = { ...company };
     delComp.deleted = true;
@@ -74,14 +75,22 @@ const CompanyForm = () => {
       setValue("ten", company.ten);
       setValue("twelve", company.twelve);
       setValue("backlogs", company.backlogs);
-      setValue("attachment1", company.attachment1);
+      setValue("compAttachs", company.compAttachs);
     }
   }, [company, params.id]);
   // File change handler
   const handleFileChange = (event) => {
     console.log("Handl", event.target.files[0]);
+    const files = event.target.files;
+    console.log(files);
+    console.log();
+    for (let idx = 0; idx < files.length; idx++) {
+      attachArr.push(files[idx]);
+      console.log(attachArr);
+    }
     const file = event.target.files[0];
-    setAttachment1(file);
+    console.log(attachArr, file);
+    setcompAttachs(attachArr);
   };
   return (
     <div>
@@ -101,9 +110,9 @@ const CompanyForm = () => {
             noValidate
             onSubmit={handleSubmit((data) => {
               const company = { ...data };
-              if (attachment1) {
-                company.attachment1 = attachment1;
-                setAttachment1(null);
+              if (compAttachs) {
+                company.compAttachs = compAttachs;
+                setcompAttachs(null);
               }
               reset();
               if (params.id) {
@@ -583,7 +592,7 @@ const CompanyForm = () => {
                 }}
               >
                 <label
-                  htmlFor="attachment1"
+                  htmlFor="compAttachs"
                   className="mb-3 block text-base font-medium text-[#07074D]"
                 >
                   Attach 1
@@ -598,9 +607,10 @@ const CompanyForm = () => {
                   }}
                 >
                   <input
+                    multiple
                     type="file"
                     onChange={handleFileChange}
-                    id="attachment1"
+                    id="compAttachs"
                     placeholder="Enter ...."
                     style={{
                       borderBottom: "2.5px solid white",

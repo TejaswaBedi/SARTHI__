@@ -204,11 +204,13 @@ export function CompanyDetail() {
                   // borderRadius: "20px",
                 }}
               >
-                {company.attachment1 ? (
+                {company.compAttachs && company.compAttachs.length ? (
                   <>
-                    <button onClick={() => showFile(company.attachment1)}>
-                      {company.attachment1}
-                    </button>
+                    {company.compAttachs.map((attachment) => (
+                      <button onClick={() => showFile(attachment)}>
+                        {attachment}
+                      </button>
+                    ))}
                   </>
                 ) : (
                   "JDs and Forms"
