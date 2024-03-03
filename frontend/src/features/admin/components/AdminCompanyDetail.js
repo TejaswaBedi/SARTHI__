@@ -64,6 +64,23 @@ export function AdminCompanyDetail() {
       "noreferrer"
     );
   };
+  const getIndexOfFirstAlphabet = (str) => {
+    for (let i = 0; i < str.length; i++) {
+      if (/[a-zA-Z]/.test(str[i])) {
+        return i;
+      }
+    }
+    return -1;
+  };
+  const buttonString = (str) => {
+    const name = str.split(".");
+    const index = getIndexOfFirstAlphabet(name[0]);
+    if (index != -1) {
+      return str.substring(index);
+    } else {
+      return "File";
+    }
+  };
   return (
     <>
       {company && (
@@ -225,7 +242,7 @@ export function AdminCompanyDetail() {
                           }}
                           onClick={() => showFile(attachment)}
                         >
-                          {attachment} ⬇️
+                          {buttonString(attachment)} ⬇️
                         </Button>
                         <br />
                         <br />
