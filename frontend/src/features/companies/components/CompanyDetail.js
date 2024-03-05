@@ -339,7 +339,7 @@ export function CompanyDetail() {
                 <Button onClick={handleApply} fullWidth>
                   <div
                     style={{
-                      color: "white",
+                      color: "black",
                       fontSize: "20px",
                       marginRight: "10px",
                     }}

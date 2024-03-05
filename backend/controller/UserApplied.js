@@ -27,10 +27,10 @@ exports.fetchCompaniesByCompId = async (req, res) => {
 };
 
 exports.addToApply = async (req, res) => {
-  const apply = new UserApplied(req.body);
   try {
+    const apply = new UserApplied(req.body);
     const doc = await apply.save();
-    const result = (await doc.populate("company")).populate("user");
+    const result = await doc.populate("company");
     res.status(201).json(result);
   } catch (err) {
     res.status(400).json(err);
