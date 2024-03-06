@@ -1,27 +1,54 @@
 const { User } = require("../model/User");
+const jwt = require("jsonwebtoken");
 
 exports.createUser = async (req, res) => {
   try {
     const user = new User(req.body);
     const response = await user.save();
-    res.status(200).json(response);
+    req.login(user, (err) => {
+      if (err) {
+        res.status(400).json(err);
+      } else {
+        const token = jwt.sign(
+          { user },
+          "qwertyuiopasdfghjklzxcvbnmIsTheSecretKey"
+        );
+        const tokenUser = {
+          email: user.email,
+          password: user.password,
+          role: user.role,
+          profile: user.profile,
+          id: user.id,
+          token: token,
+        };
+        res
+          .cookie("jwt", token, {
+            expires: new Date(Date.now() + 3600000),
+            httpOnly: true,
+          })
+          .status(200)
+          .json(tokenUser);
+      }
+    });
   } catch (err) {
     res.status(400).json(err);
   }
 };
 
 exports.loginUser = async (req, res) => {
-  try {
-    const user = await User.findOne({ email: req.body.email });
-    if (!user) {
-      res.status(401).json({ message: "Invalid Credentials" });
-    }
-    if (user.password === req.body.password) {
-      res.status(200).json(user);
-    } else {
-      res.status(401).json({ message: "Invalid Credentials" });
-    }
-  } catch (err) {
-    res.status(400).json(err);
+  res
+    .cookie("jwt", req.user.token, {
+      expires: new Date(Date.now() + 3600000),
+      httpOnly: true,
+    })
+    .status(200)
+    .json(req.user);
+};
+
+exports.checkAuth = async (req, res) => {
+  if (req.user) {
+    res.json(req.user);
+  } else {
+    res.status(401);
   }
 };

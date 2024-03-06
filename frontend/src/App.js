@@ -23,12 +23,16 @@ import { positions, Provider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 import { AdminApplied } from "./features/admin/components/AdminApplied";
 import UserDetail from "./pages/UserDetail";
+import { checkAuthAsync } from "./features/auth/authSlice";
 const options = {
   timeout: 5000,
   position: positions.BOTTOM_LEFT,
 };
 const App = () => {
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(checkAuthAsync());
+  }, []);
   return (
     <div>
       <Provider template={AlertTemplate} {...options}>

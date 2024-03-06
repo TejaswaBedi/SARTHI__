@@ -11,7 +11,7 @@ import Container from "@mui/material/Container";
 import { NavLink, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { checkUserAsync, selectError, selectLoggedInUser } from "../authSlice";
+import { loginUserAsync, selectError, selectLoggedInUser } from "../authSlice";
 
 export function Login() {
   const dispatch = useDispatch();
@@ -53,7 +53,7 @@ export function Login() {
               component="form"
               onSubmit={handleSubmit((data) => {
                 dispatch(
-                  checkUserAsync({ email: data.email, password: data.password })
+                  loginUserAsync({ email: data.email, password: data.password })
                 );
                 console.log(data);
               })}
