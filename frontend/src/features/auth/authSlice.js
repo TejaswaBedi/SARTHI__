@@ -6,6 +6,7 @@ const initialState = {
   loggedInUser: null,
   status: "idle",
   error: null,
+  userChecked: false,
 };
 
 export const createUserAsync = createAsyncThunk(
@@ -99,6 +100,11 @@ export const userSlice = createSlice({
       .addCase(checkAuthAsync.fulfilled, (state, action) => {
         state.status = "idle";
         state.loggedInUser = action.payload;
+        state.userChecked = true;
+      })
+      .addCase(checkAuthAsync.rejected, (state, action) => {
+        state.status = "idle";
+        state.userChecked = true;
       });
   },
 });
@@ -106,5 +112,6 @@ export const userSlice = createSlice({
 export const { increment } = userSlice.actions;
 export const selectLoggedInUser = (state) => state.auth.loggedInUser;
 export const selectError = (state) => state.auth.error;
+export const selectUserChecked = (state) => state.auth.userChecked;
 
 export default userSlice.reducer;
