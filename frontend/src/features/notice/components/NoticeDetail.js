@@ -47,7 +47,7 @@ const NoticeDetail = () => {
               width: "90vw",
               margin: "2vh 8vh",
               padding: "2vh",
-              background: "lightblue",
+              background: "#252f3d",
               border: "red 2px",
               //borderRadius: "30px",
             }}
@@ -75,7 +75,7 @@ const NoticeDetail = () => {
               width: "90vw",
               margin: "2vh 8vh",
               padding: "2vh",
-              background: "lightblue",
+              background: "#252f3d",
               border: "red 2px",
               //borderRadius: "30px",
             }}

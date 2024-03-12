@@ -32,7 +32,7 @@ const CompanyPage = () => {
                 height: "100%",
                 width: "46%",
                 padding: "1vh 2vh",
-                background: "lightblue",
+                background: "#252f3d",
                 // borderRadius: "30px",
               }}
             >
@@ -48,7 +48,7 @@ const CompanyPage = () => {
                 height: "100%",
                 width: "46%",
                 padding: "1vh 2vh",
-                background: "lightblue",
+                background: "#252f3d",
                 // borderRadius: "30px",
               }}
             >

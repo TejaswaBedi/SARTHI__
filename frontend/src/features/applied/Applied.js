@@ -34,7 +34,7 @@ export function Applied() {
               width: "90vw",
               padding: "1vh 2vh",
               margin: "4vh",
-              background: "lightblue",
+              background: "#252f3d",
               // borderRadius: "30px",
             }}
           >

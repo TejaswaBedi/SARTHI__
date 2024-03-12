@@ -180,7 +180,7 @@ export function AdminCompanyDetail() {
                 width: "90vw",
                 margin: "1vh 4vh",
                 padding: "2vh",
-                background: "#242526",
+                background: "#252f3d",
                 border: "red 2px",
                 borderRadius: "30px",
               }}
@@ -210,7 +210,7 @@ export function AdminCompanyDetail() {
                 width: "90vw",
                 margin: "1vh 4vh",
                 padding: "2vh",
-                background: "#242526",
+                background: "#252f3d",
                 border: "red 2px",
                 borderRadius: "30px",
               }}
@@ -261,7 +261,7 @@ export function AdminCompanyDetail() {
                 height: "40vh",
                 margin: "2vh 4vh",
                 padding: "2vh",
-                background: "#242526",
+                background: "#252f3d",
                 border: "red 2px",
                 borderRadius: "30px",
               }}

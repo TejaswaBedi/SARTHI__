@@ -50,7 +50,7 @@ export function Notice() {
                 width: "90vw",
                 padding: "1vh 2vh",
                 margin: "4vh",
-                background: "lightblue",
+                background: "#252f3d",
                 //borderRadius: "30px",
               }}
             >
@@ -81,7 +81,7 @@ export function Notice() {
                                 width: "85vw",
                                 margin: "1vh 4vh",
                                 padding: "2vh",
-                                background: "#969797",
+                                background: "white",
                                 border: "red 2px",
                                 //borderRadius: "30px",
                                 display: "flex",
@@ -97,7 +97,7 @@ export function Notice() {
                               >
                                 <strong>{currNotice.noticeMsg}</strong>
                               </div>
-                              <div style={{ color: "white" }}>
+                              <div style={{ color: "black" }}>
                                 <p>
                                   Date -{" "}
                                   {new Date(
@@ -156,7 +156,7 @@ export function Notice() {
                                   width: "85vw",
                                   margin: "1vh 4vh",
                                   padding: "2vh",
-                                  background: "#969797",
+                                  background: "white",
                                   border: "red 2px",
                                   // //borderRadius: "30px",
                                   display: "flex",
@@ -172,7 +172,7 @@ export function Notice() {
                                 >
                                   <strong>{currNotice.noticeMsg}</strong>
                                 </div>
-                                <div style={{ color: "white" }}>
+                                <div style={{ color: "black" }}>
                                   <p>
                                     Date -{" "}
                                     {new Date(
@@ -190,33 +190,6 @@ export function Notice() {
                                 </div>
                               </div>
                             </NavLink>
-                          )}
-                          {currNotice.deleted && user.role === "admin" && (
-                            <p
-                              style={{
-                                color: "red",
-                                fontSize: "20px",
-                                marginLeft: "2.29%",
-                              }}
-                            >
-                              <strong>Notice Deleted</strong>
-                            </p>
-                          )}
-                          {user && user.role === "admin" && (
-                            <div
-                              style={{
-                                textAlign: "right",
-                                marginRight: "3%",
-                              }}
-                            >
-                              <NavLink
-                                to={`/admin/notice-form/${currNotice.id}`}
-                              >
-                                <Button style={{ backgroundColor: "white" }}>
-                                  Edit
-                                </Button>
-                              </NavLink>
-                            </div>
                           )}
                         </>
                       );

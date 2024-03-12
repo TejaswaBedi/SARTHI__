@@ -33,7 +33,7 @@ const AdminHomePage = () => {
             width: "90vw",
             padding: "1vh 2vh",
             margin: "4vh",
-            background: "blue",
+            background: "#252f3d",
             // borderRadius: "30px",
           }}
         >

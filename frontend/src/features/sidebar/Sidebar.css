@@ -116,7 +116,7 @@ ul li p {
 /* controls the current page and all link colors  */
 .active {
   /* color: #0099ff; */
-  color: rgb(0, 26, 255);
+  color: #011cb7;
   font-size: 7vh;
   text-decoration: underline;
 }

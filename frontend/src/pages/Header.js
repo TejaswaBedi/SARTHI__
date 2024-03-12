@@ -10,7 +10,7 @@ const Header = ({ heading1, heading2, heading3 }) => {
         margin: "2vh 4vh",
         padding: "1vh 2vh",
 
-        background: "blue",
+        background: "#121927",
         // background: "lightblue",
         border: "red 2px",
         // borderRadius: "30px",

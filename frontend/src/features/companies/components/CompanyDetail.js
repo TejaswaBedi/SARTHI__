@@ -184,7 +184,7 @@ export function CompanyDetail() {
                 width: "90vw",
                 margin: "1vh 4vh",
                 padding: "2vh",
-                background: "lightblue",
+                background: "#252f3d",
                 border: "red 2px",
                 // borderRadius: "30px",
               }}
@@ -214,7 +214,7 @@ export function CompanyDetail() {
                 width: "90vw",
                 margin: "1vh 4vh",
                 padding: "2vh",
-                background: "lightblue",
+                background: "#252f3d",
                 border: "red 2px",
                 // borderRadius: "30px",
               }}
@@ -264,7 +264,7 @@ export function CompanyDetail() {
                 height: "40vh",
                 margin: "2vh 4vh",
                 padding: "2vh",
-                background: "lightblue",
+                background: "#252f3d",
                 border: "red 2px",
                 // borderRadius: "30px",
               }}
